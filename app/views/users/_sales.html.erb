@@ -1,0 +1,28 @@
+<ul class="thumbnails">
+  <% sale.sale_items.each do |item| %>
+    <li class="span4">
+      <div class="thumbnail">
+        <div class="product-image">
+          <%= link_to image_tag(item.product.image_url(:thumb)), product_path(item.product), :class => 'link-image' if item.product.image? %>
+        </div>
+        <h5> <%= link_to item.product.description, product_path(item.product), :class => 'btn btn-link' %> </h5>
+        <table>
+          <tbody>
+            <tr>
+              <th> <%= t(:'sales.quantity') %>: </th>
+              <td> <%= item.quantity %> </td>
+            </tr>
+            <tr>
+              <th> <%= t(:'purchases.unity_price') %>: </th>
+              <td> <%= number_to_currency(item.product_price) %> </td> 
+            </tr>
+            <tr>
+              <th> <%= t(:'sales.product.price.total') %>: </th>
+              <td> <%= number_to_currency(total_value item) %> </td>
+            </tr>
+          </tbody> 
+        </table>
+      </div>
+    </li>
+  <% end %>
+</ul>

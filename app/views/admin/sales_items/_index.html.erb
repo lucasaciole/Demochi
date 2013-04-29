@@ -1,0 +1,12 @@
+<table class="table table-bordered table-hover">
+  <thead>
+    <th> <%= Sale_item.human_attribute_name(:id) %> </th>
+    <th> <%= Sale_item.human_attribute_name(:price) %> </th>
+    <th> <%= Sale_item.human_attribute_name(:quantity) %> </th>
+    <th colspan=3></th>
+  </thead>
+
+  <tbody  class="sortable" id="items">
+    <%= render :partial => "item" %>
+  </tbody>
+</table>

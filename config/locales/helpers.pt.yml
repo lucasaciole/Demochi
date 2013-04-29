@@ -1,0 +1,9 @@
+pt:
+  helpers:
+    select:
+      prompt: Por favor selecione uma opção.
+    submit:
+      product:
+        create: Criar %{model}
+        submit: Salvar %{model}
+        update: Atualizar %{model}

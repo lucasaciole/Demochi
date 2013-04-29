@@ -1,0 +1,52 @@
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr> 
+      <td class="sale-info" colspan="7"> 
+        <label class="sales-label-bold"> <%= t(:'sales.client') %>: </label>
+        <%= username(@sale.user_id) %>
+      </td> 
+    </tr>
+    <tr>
+      <td class="sales-info" colspan="7">
+        <label class="sales-label-bold"> <%= t(:'sales.date') %>: </label>
+        <%= l(@sale.created_at, format: :custom) %> 
+      </td>
+    </tr>
+    <tr>
+      <th> <%= t(:'activerecord.models.product') %> </th>
+      <th> <%= Product.human_attribute_name(:code) %> </th>
+      <th> <%= Product.human_attribute_name(:description) %> </th>
+      <th> <%= Product.human_attribute_name(:category) %> </th>
+      <th> <%= t(:'sales.quantity') %> </th>
+      <th> <%= t(:'sales.product.price.unity') %> </th>
+      <th> <%= t(:'sales.product.price.total') %> </th>
+    </tr>
+  </thead>
+
+  <tfoot>
+    <tr>
+      <th colspan="6" class="sales"> 
+        <%= t(:'sales.sum') %>:
+      </th>
+      <td> <%= number_to_currency(@sale.total_price) %> </td>
+    </tr>
+  </tfoot>
+  
+  <tbody>
+    <% @sale_items.each do |sale_item| %>
+    <tr>
+      <th> # </th>
+      <td> <%= product_code(sale_item) %> </td>
+      <td> <%= product_description(sale_item) %> </td>
+      <td> <%= product_category(sale_item) %> </td>
+      <td> <%= sale_item.quantity %> </td>
+      <td> <%= number_to_currency(sale_item.product_price) %> </td>
+      <td> <%= number_to_currency(total_item_value(sale_item)) %> </td>
+	  </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<div class="form-actions">
+  <%= link_to t(:back), admin_sales_path, class: 'btn' %>
+</div>

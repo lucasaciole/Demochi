@@ -1,0 +1,73 @@
+// Place all the styles related to the cart controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// .sign-container {
+	.sign-in {
+		float: left;
+		display: inline;
+		width: 50%;
+		orientation: right;
+	}
+	.sign_up {
+		float: right;
+		display: inline;
+		width: 50%;
+	}
+// }
+
+.container-cart {
+	border-radius: 4px;
+	float: right;
+	max-width: 360px;
+	padding: 0 0 10px 10px;
+	position: relative;
+	width: 100%;
+	
+	button {
+		float: right;
+	}
+	
+	h4 {
+		left: 25px;
+		margin: 0 0 -2px 0;
+		padding: 0 2px 0;
+	}
+	
+	.cart {
+		background-color: #FFF;
+		border-radius: 5px 5px 0 5px;
+		padding: 10px;
+	
+		a:hover {
+			background: none;
+		}
+
+		.cart-total {
+			text-align: right;
+		}
+
+		.label-total {
+			display: inline;
+			font-weight: bold;
+		}
+		
+		.table {
+			margin: 0;
+			width: 100%;
+			
+			td {
+				line-height: 100%;
+				padding: 4px;
+				vertical-align: middle;
+			}
+		}
+		
+		.txt-product-quantity {
+			font-size: 12px;
+			margin: 0;
+			max-height: 15px;
+			max-width: 20px;
+			text-align: center;
+		}
+	}
+}

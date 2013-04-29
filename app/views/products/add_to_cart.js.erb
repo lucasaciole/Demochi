@@ -1,0 +1,5 @@
+<% if @succefully_added %>
+  <%= render partial: "change_cart"%>
+<% else %>
+  alert("<%= t(:'cart.already_on_cart') %>");
+<% end %>

@@ -1,0 +1,35 @@
+<!-- FILTER -->
+<div class="filter-form">
+  <select id="categories_select" class="categories-select">
+    <option class="category-option" 
+            selected="selected" 
+            data-ajax-href="<%= products_path %>">
+      <%= t(:all_categories) %> 
+    </option>
+
+    <% @categories.each do |category| %>
+      <option class="category-option" 
+              data-ajax-href="<%= products_category_path(category) %>"> 
+        <%= category.name %> 
+      </option>
+    <% end %> 
+  </select>
+
+  <%= simple_form_for :search, url: search_form_path, method: "GET", html: { id: "search_form", class: "search" } do |f| %>
+    <span class="input-append">
+      <%= f.text_field :description, :id => "search_field" %>
+      <%= f.submit t(:'search.button_text'), :name => nil, 
+                          :id => "btn_search", :class => 'btn btn-info' %>
+    </span>
+  <% end %>
+</div>
+
+<!-- PRODUCTS AND PAGINATION -->
+<div id="products_and_paginator">
+  <%= render partial: "products/index" %>
+</div>
+
+<!-- CART -->
+<div class="shop-cart clearfix">
+  <%= render :partial => "cart/show", locals: { items: @items, products: @cart_products } %>
+</div>

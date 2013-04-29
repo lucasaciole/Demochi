@@ -1,0 +1,46 @@
+.header {
+	position: relative;
+
+	h1 {
+		float: left;
+	}
+
+	.form-fields { 
+		bottom: -20px;
+		float: right;
+		position: relative;
+		right: 0px;
+
+		.filter-form {
+			display: inline;
+		}
+
+		.new-product-btn {
+			display: inline;
+		}
+
+		.add-on.date-end:first-child {
+			-webkit-border-radius: 0;
+			-moz-border-radius: 0;
+			border-radius: 0;
+		}
+	}
+}
+
+tfoot tr th.sales {
+	text-align: right;
+}
+
+.sale-info {
+	font-size: 1.2em;
+}
+
+.sales-label-bold {
+	display: inline;
+	font-weight: bold;
+}
+
+span.help-inline {
+	position: relative;
+	top: -5px;
+}

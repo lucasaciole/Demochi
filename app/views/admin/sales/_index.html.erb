@@ -1,0 +1,14 @@
+<% @sales.each do |sale| %>
+  <tr>
+    <td> <%= sale.id %> </td>
+    <td> <%= l(sale.created_at, format: :custom) %> </td>
+    <td> <%= username(sale.user_id) %> </td>
+    <td> <%= number_to_currency(sale.total_price) %> </td>
+    <td>
+      <div align="center">  
+        <%= link_to t(:'sales.see_details'),
+                      admin_sale_path(sale), :class => 'btn' %> 
+      </div>
+    </td>
+  </tr>
+<% end %>

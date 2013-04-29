@@ -1,0 +1,27 @@
+<% @sale_items.each do |item| %>
+  <tr>
+    <td><%= item.id %></td>
+    <td><%= item.quantity %></td>
+    <td><%= number_to_currency(item.price) %></td>
+    <td><%= product.category.name %></td>
+    <td>
+      <div align="center">  
+        <%= link_to ('<i class="icon-share"></i> ').html_safe,
+                      admin_product_path(product), :class => 'btn' %> </td>
+      </div>
+    <td>
+      <div align="center">
+        <%= link_to ('<i class="icon-edit icon-white"></i> ').html_safe,
+                      edit_admin_product_path(product), :class => 'btn btn-info' %> </td>
+      </div>
+    <td>
+      <div align="center">
+        <%= link_to ('<i class="icon-remove icon-white"></i> ').html_safe,
+                      admin_product_path(product), 
+                      method: :delete, 
+                      data: { confirm: t(:'notice.are_you_sure') }, 
+                      :class => 'btn btn-danger' %>
+      </div>
+    </td>
+  </tr>
+<% end %>

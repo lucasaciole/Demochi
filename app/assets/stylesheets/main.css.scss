@@ -1,0 +1,28 @@
+.all-products {
+	display: inline;
+	min-width: 800px;
+}
+
+.clear {
+	clear: both;
+}
+
+.filter-form {
+	margin-left: 8px;
+}
+
+.form-inputs { 
+	textarea {
+		resize: none;
+	}
+}
+
+#products_and_paginator {
+	float: left;
+}
+
+.shop-cart {
+	float: right;
+	right: 55px;
+	width: 360px;
+}

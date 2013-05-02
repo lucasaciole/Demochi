@@ -1,0 +1,69 @@
+div#nav {
+	background-color: #000;
+	color: #FFF;
+	font-family: Droid Sans;
+	font-size: 14px;
+	height: 32px;
+	line-height: 32px;
+	width: 100%;
+
+	.container {
+		width: 950px;
+		margin: 0 auto;
+		
+		a {
+			color: #FFF;
+			text-decoration: underline;
+			font-weight: bold;
+
+			&.logout {
+				font-size: 12px;
+			}
+		}
+
+		#cart {
+			float: right;
+			padding: 0 12px;
+			font-size: 12px;
+
+			a {
+				text-decoration: none;
+				font-weight: normal;
+			}
+
+			.cart-icon {
+				padding: 8px;
+			}
+		}
+
+		#my_account {
+			cursor: pointer;
+			display: inline-block;
+			float: right;
+			width: 140px;
+
+			span {
+				display: inline-block;
+				margin: 0 12px;
+			}
+
+			ul {
+				list-style-type: none;
+				padding: 0;
+				margin: 0;
+
+				li {
+					font-size: 12px;
+					padding: 7px;
+				}
+
+				&.menu {
+					position: absolute;
+					background-color: #000;
+					width: inherit;
+					z-index: 1;
+				}
+			}
+		}
+	}
+}

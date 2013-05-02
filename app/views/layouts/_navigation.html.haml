@@ -1,0 +1,27 @@
+/ nav bar
+#nav
+  .container
+    - if user_signed_in?
+      Olá #{current_user.name}. #{link_to("Sair", destroy_user_session_path , :method=>'delete', :class=>"logout")} 
+    - else
+      Faça #{link_to("login", new_user_session_path)} ou #{link_to("cadastre-se", new_user_registration_path) unless user_signed_in?}
+
+    %span#cart
+      %span.cart-icon ??
+      = link_to("Itens: 0", user_sales_path)
+
+    %span#my_account
+      %span Minha conta
+      %span.arrow >
+      %ul.menu
+        - if not user_signed_in?
+          %li Fazer login
+        %li Wishlist
+        %li Alterar dados
+        %li Histórico de pedidos
+
+        - if user_signed_in?
+          %li Sair
+      .clear
+
+/ end of nav bar

@@ -1,3 +1,14 @@
+.container {
+	width: 950px;
+	margin: 0 auto;
+	
+	h1 {
+		font-size: 36px;
+	}
+}
+
+////////////////////////////////////////////////////////////
+
 .all-products {
 	display: inline;
 	min-width: 800px;
@@ -25,4 +36,8 @@
 	float: right;
 	right: 55px;
 	width: 360px;
+}
+
+body {
+	margin: 0;
 }

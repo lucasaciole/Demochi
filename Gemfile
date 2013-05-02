@@ -9,7 +9,7 @@ gem 'devise'
 gem 'foreigner'
 gem 'mysql'
 gem 'mysql2'
-gem 'bootstrap-sass' #, :git => 'git://github.com/jasny/bootstrap.git'
+# gem 'bootstrap-sass' #, :git => 'git://github.com/jasny/bootstrap.git'
 gem 'simple_form'
 gem "rmagick"
 gem "carrierwave"
@@ -32,6 +32,8 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+gem 'haml'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

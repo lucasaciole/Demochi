@@ -2,10 +2,46 @@
 	margin: 56px 0 45px 0;
 
 	ul {
+		padding: 0;
+
+		li {
+			margin-left: 30px;
+			border-bottom: 1px solid #51d1e0;
+			padding: 4px 0;
+
+			.arrow {
+				background-image: url("blue-arrow.png");
+				display: inline-block;
+				height: 6px;
+				width: 7px;
+			}
+		}
+
+		li, &.menu {
+			display: inline-block;
+		}
+
 		&.menu {
 			font-size: 18px;
 			font-weight: bold;
 			list-style-type: none;
+		}
+	}
+
+	a {
+		font-family: Droid Sans;
+		font-size: 18px;
+		font-weight: bold;
+		text-decoration: none;
+
+		&, &:visited {
+			color: #000;
+		}
+
+		&.title {
+			font-family: Open Sans;
+			font-size: 36px;
+			margin-right: 20px;
 		}
 	}
 }

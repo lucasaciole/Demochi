@@ -7,12 +7,12 @@
       Faça #{link_to("login", new_user_session_path)} ou #{link_to("cadastre-se", new_user_registration_path) unless user_signed_in?}
 
     %span#cart
-      %span.cart-icon ??
+      %span.cart-icon
       = link_to("Itens: 0", user_sales_path)
 
     %span#my_account
       %span Minha conta
-      %span.arrow >
+      %span.arrow
       %ul.menu
         - if not user_signed_in?
           %li Fazer login

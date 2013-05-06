@@ -1,7 +1,12 @@
 #header	
-	%h1 Mochi
+	= link_to "Mochi", root_path, :class => "title"
 
 	%ul.menu
-		%li A marca
-		%li Blog
-		%li Shop
+		%li 
+			= link_to "A marca", root_path
+			%span.arrow 
+		%li 
+			= link_to "Blog", root_path
+		%li
+			= link_to "Shop", root_path
+			%span.arrow

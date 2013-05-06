@@ -32,7 +32,13 @@ div#nav {
 			}
 
 			.cart-icon {
-				padding: 8px;
+				background-image: url("cart.png");
+				display: inline-block;
+				height: 17px;
+				margin-right: 8px;
+				position: relative;
+				top: 2px;
+				width: 13px;
 			}
 		}
 
@@ -41,6 +47,14 @@ div#nav {
 			display: inline-block;
 			float: right;
 			width: 140px;
+
+			.arrow {
+				background-image: url("white-arrow.png");
+				display: inline-block;
+				height: 6px;
+				margin: 0;
+				width: 7px;
+			}
 
 			span {
 				display: inline-block;
@@ -58,8 +72,9 @@ div#nav {
 				}
 
 				&.menu {
-					position: absolute;
 					background-color: #000;
+					line-height: 20px;
+					position: absolute;
 					width: inherit;
 					z-index: 1;
 				}

@@ -6,6 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+puts "Running seeds rake."
+
 # Admin Account
 User.find_or_create_by_email(
   name:                   "System Admin", 
@@ -16,8 +18,8 @@ User.find_or_create_by_email(
 )
 
 # Categories
-["Masculino","Feminino","Infantil"].each do |cat|
+["Feminino","Masculino","Acessórios","Homewear","Giftcard","Sale"].each do |cat|
   Category.find_or_create_by_name(cat)
 end
 
-puts "Running seed rake."
+puts "Seeding successfully run."

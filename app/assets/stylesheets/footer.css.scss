@@ -1,0 +1,69 @@
+#footer {
+	margin-top: 50px;
+	height: 286px;
+	font-family: 'Droid Sans';
+	font-size: 13px;
+
+	.top {
+		background: #fcffb6;
+		border-top: 2px dashed #51d1e0;
+		height: 90%;
+
+		.footer-content{
+			height: 100%;
+			margin: 0 auto;
+			width: 950px;
+
+			div {
+				float: right;
+			}
+
+			.links {
+				background: #FFF;
+				box-shadow: -4px 5px 0px 0px #76c71f;
+				height: 200px;
+				float: left;
+				margin-top: 25px;
+				width: 235px;
+				text-transform: uppercase;
+
+				ul {
+					list-style-type: none;
+					margin: 0;
+					padding: 0;
+					text-transform: none;
+				}
+
+				.help, .follow {
+				}
+				.help {
+					float: left;
+				}
+				.follow {
+					float: right;
+				}
+			}
+
+			.newsletter {
+				background: #4bddee;
+				border: 3px solid #51d1e0; 
+				border-radius: 8px;
+				box-shadow: -3px 4px 0px 1px #8539d4;
+				float: left;
+				height: 155px;
+				margin-top: 27px;
+				margin-left: 30px;
+				width: 365px;
+			}
+		}
+	}
+
+	.bottom {
+		text-align: center;
+		line-height: 30px;
+
+		p {
+			margin-top: 0;
+		}
+	}
+}

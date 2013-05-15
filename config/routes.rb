@@ -1,6 +1,5 @@
 LojaVirtual::Application.routes.draw do
 
-  resources :articles
 
 
   devise_for :users
@@ -11,6 +10,7 @@ LojaVirtual::Application.routes.draw do
   namespace :admin do
     root :to => 'welcome#index'
     resources :products
+    resources :articles
     resources :sales
     match '/products/category/:category_id' => 'products#index', :as => :products_category
   end

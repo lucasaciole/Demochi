@@ -34,7 +34,7 @@ class Admin::ArticlesController < Admin::ApplicationController
 
   # GET /articles/1/edit
   def edit
-    @admin_article = Article.find(params[:id])
+    @article = Article.find(params[:id])
   end
 
   # POST /articles
@@ -78,7 +78,7 @@ class Admin::ArticlesController < Admin::ApplicationController
     @article.destroy
 
     respond_to do |format|
-      format.html { redirect_to articles_url }
+      format.html { redirect_to admin_articles_url }
       format.json { head :no_content }
     end
   end

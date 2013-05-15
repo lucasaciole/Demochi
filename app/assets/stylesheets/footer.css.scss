@@ -29,6 +29,7 @@
 				float: right;
 			}
 
+			// LINKS
 			.links {
 				background: #FFF;
 				box-shadow: -4px 5px 0px 0px #76c71f;
@@ -86,6 +87,7 @@
 				}
 			}
 
+			// NEWSLETTER
 			.newsletter {
 				background: #4bddee;
 				border: 3px solid #51d1e0; 
@@ -96,6 +98,60 @@
 				margin-top: 27px;
 				margin-left: 30px;
 				width: 365px;
+
+				div:first-child{
+					color: #FFF;
+					font-family: 'Open Sans';
+
+					.one, .two {
+						text-align: center;
+						width: 100%;
+					}
+
+					.one {
+						font-size: 23px;
+						font-weight: bold;
+						margin-top: 10px;
+					}
+
+					.two {
+						font-size: 14px;
+						margin-top: -3px;
+						margin-bottom: 10px;
+					}
+				}
+
+				.email-box {
+					background: #FFF;
+					color: #51d1e0;
+					font-family: 'Open Sans';
+					font-size: 14px;
+					font-weight: bold;
+					height: 70px;
+					// line-height: 70px;
+					width: 100%;
+
+					form {
+						margin-top: 25px;
+						text-align: center;
+
+						input[type="text"] {
+							border: none;
+							border-bottom: 1px solid #b2b2b2;
+							padding: 3px;
+							width: 200px;
+						}
+
+						input[type="submit"] {
+							background: none;
+							border: none;
+							color: #51d1e0;
+							cursor: pointer;
+							font-size: 14px;
+							font-weight: bold;
+						}
+					}
+				}
 			}
 		}
 	}

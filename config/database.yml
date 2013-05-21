@@ -2,7 +2,7 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: loja_virtual
+  database: demochi_dev
   pool: 5
   username: root
   password: 
@@ -12,7 +12,7 @@ test:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: loja_virtual_test
+  database: demochi_test
   pool: 5
   username: root
   password:
@@ -22,7 +22,7 @@ production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: loja_virtual_production
+  database: demochi
   pool: 5
   username: root
   password:

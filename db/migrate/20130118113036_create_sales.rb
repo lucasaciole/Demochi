@@ -6,7 +6,11 @@ class CreateSales < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    # Indexes
     add_index :sales, :user_id
+
+    # Foreign Keys
     add_foreign_key :sales, :users
   end
 end

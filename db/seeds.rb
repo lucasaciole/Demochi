@@ -18,7 +18,7 @@ User.find_or_create_by_email(
 )
 
 # Categories
-["Feminino","Masculino","Acessórios","Homewear","Giftcard","Sale"].each do |cat|
+["Feminino","Masculino","Acessorios","Homewear","Giftcard","Sale"].each do |cat|
   Category.find_or_create_by_name(cat)
 end
 

@@ -1,0 +1,55 @@
+#blog_highlights {
+	margin: 68px 0;
+
+	.description {
+		float: left;
+		display: inline-block;
+		width: 365px;
+		font-family: 'Open Sans';
+		
+		h3 {
+			margin: 5px 0 20px;
+			font-family: 'Droid Sans';
+			color: #51d1e0;
+			font-size: 15pt;
+		}
+
+		p {
+			color: #000;
+			font-size: 14px;
+			max-height: 200px;
+			overflow: hidden;
+		}
+
+		.area-name {
+			color: #10ea24;
+			font-size: 14px;
+			font-weight: bold;
+			font-style: italic;
+		}
+
+		.know-more {
+			color: #51d1e0;
+			display: inline-block;
+			font-size: 14px;
+			font-style: italic;
+			font-weight: bold;
+			margin-top: 20px;
+			text-decoration: none;
+		}
+	}
+
+	.image {
+		float: right;
+
+		img {
+			height: 317px;
+			width: 565px;
+
+			// remove pls
+			border: 1px solid black;
+			// remove pls 
+		}
+	}
+
+}

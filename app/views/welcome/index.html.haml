@@ -16,7 +16,15 @@
 		#bottom_highlights
 
 	#blog_highlights
-	- if !@home_headlines.nil?
-		= image_tag @home_headlines.image_url(:thumb), :class => 'img-polaroid' if @home_headlines.image?
-		= @home_headlines.title
-		= @home_headlines.body
+		- if !@home_headlines.nil?
+			.description
+				.area-name Blog
+				%h3= @home_headlines.title
+				%p= @home_headlines.body
+
+				= link_to "Saiba mais >" ,"#", :class => "know-more"
+
+			.image
+				= image_tag @home_headlines.image_url(:thumb) if @home_headlines.image?
+
+		.clear

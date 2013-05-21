@@ -2,7 +2,7 @@
 
 <p><b><%= @article.title%></b></p>
 <p><%= @article.body%></p>
-<%= image_tag @home_headlines.image_url(:thumb), :class => 'img-polaroid' if @home_headlines.image? %>
+<%= image_tag @article.image_url(:thumb), :class => 'img-polaroid' if @article.image? %>
 
 <%= link_to 'Edit', edit_admin_article_path(@article) %> |
 <%= link_to 'Back', admin_articles_path %>

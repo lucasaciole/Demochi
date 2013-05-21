@@ -9,18 +9,7 @@ class WelcomeController < ApplicationController
   
   #GET /
   def index   
-    # Load categories for filter products
-    @categories = Category.all
-     
-    # filter_products
-    paginate_products 8
-    
-    load_cart_items
-    
-    respond_to do |format|
-      format.html { render(partial: "products/index") if request.xhr? }
-      format.js   { render partial: "products/index"                  }
-      format.json { render json:    @products                         }
-    end
+    # Get headlines
+    @home_headlines = Article.find_by_home_headline true
   end
 end

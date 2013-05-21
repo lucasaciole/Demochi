@@ -4,6 +4,8 @@
   <tr>
     <th>Title</th>
     <th>Body</th>
+    <th>Image</th>
+    <th>Home Headline?</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,6 +15,8 @@
   <tr>
     <td><%= admin_article.title%></td>
     <td><%= admin_article.body%></td>
+    <td><%= image_tag admin_article.image_url(:thumb), :class => 'img-polaroid' if admin_article.image? %></td>
+    <td><%= admin_article.home_headline %></td>
     <td><%= link_to 'Show', admin_article_path(admin_article) %></td>
     <td><%= link_to 'Edit', edit_admin_article_path(admin_article) %></td>
     <td><%= link_to 'Destroy', admin_article_path(admin_article), method: :delete, data: { confirm: 'Are you sure?' } %></td>

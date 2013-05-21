@@ -15,3 +15,8 @@
 
 		#bottom_highlights
 
+	#blog_highlights
+	- if !@home_headlines.nil?
+		= image_tag @home_headlines.image_url(:thumb), :class => 'img-polaroid' if @home_headlines.image?
+		= @home_headlines.title
+		= @home_headlines.body

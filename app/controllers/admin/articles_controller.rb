@@ -13,7 +13,7 @@ class Admin::ArticlesController < Admin::ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
-    @article = ::Article.find(params[:id])
+    @article = Article.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +24,7 @@ class Admin::ArticlesController < Admin::ApplicationController
   # GET /articles/new
   # GET /articles/new.json
   def new
-    @article = ::Article.new
+    @article = Article.new
 
     respond_to do |format|
       format.html # new.html.erb

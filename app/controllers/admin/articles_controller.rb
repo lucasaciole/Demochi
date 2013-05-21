@@ -43,9 +43,12 @@ class Admin::ArticlesController < Admin::ApplicationController
     
     @article = Article.new(params[:article])
     @article.created_at = Time.now
+    if @article.home_headline
+      clear_all_headlines
+    end
 
-    respond_to do |format|
-      if @article.save
+    if @article.save
+      respond_to do |format|
         format.html { redirect_to admin_article_path(@article), notice: 'Article was successfully created.' }
         format.json { render json: @article, status: :created, location: @article }
       else
@@ -59,7 +62,9 @@ class Admin::ArticlesController < Admin::ApplicationController
   # PUT /articles/1.json
   def update
     @article = Article.find(params[:id])
-
+    if params[:article][:home_headline]
+      clear_all_headlines
+    end
     respond_to do |format|
       if @article.update_attributes(params[:article])
         format.html { redirect_to admin_article_path(@article), notice: 'Article was successfully updated.' }
@@ -81,5 +86,10 @@ class Admin::ArticlesController < Admin::ApplicationController
       format.html { redirect_to admin_articles_url }
       format.json { head :no_content }
     end
+  end
+
+  def clear_all_headlines
+    article = Article.find_all_by_home_headline true
+    article.each { |a| a.update_attributes home_headline: false if a }
   end
 end

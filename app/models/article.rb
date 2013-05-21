@@ -4,12 +4,5 @@ class Article < ActiveRecord::Base
   # Uploaders.
   mount_uploader :image, ImageUploader
 
-  # Validations
-  validates :image, 
-    allow_blank: true, 
-    format: {
-      with: %r{\.(jpe?g)\z}i,
-      message: 'must be a JPG'
-    }
-
+  validates :image, presence: true
 end

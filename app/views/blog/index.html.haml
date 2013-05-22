@@ -22,8 +22,17 @@
 				%p lorem ipsum bla bla bla lorem ipsum bla bla bla lorem ipsum bla bla bla lorem ipsum bla bla bla 
 
 		.posts
-			.post
-				lorem ipsum bla bla bla
+			- @recent.each do |recent|  
+				.post
+					.post-details
+						lorem ipsum bla bla bla
+					.post-preview
+						.title= recent.title
+						.image 
+							%img{src: recent.image}
+						.body= recent.body
+
+						Ler mais
 
 	#sidebar
 		bla bla bla

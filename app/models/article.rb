@@ -4,5 +4,6 @@ class Article < ActiveRecord::Base
   # Uploaders.
   mount_uploader :image, ImageUploader
 
+  # Validation
   validates :image, presence: true
 end

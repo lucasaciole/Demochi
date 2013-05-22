@@ -2,6 +2,12 @@ LojaVirtual::Application.routes.draw do
 
 
 
+  get "blog/index"
+
+  get "blog/search"
+
+  get "blog/show"
+
   devise_for :users
 
   get "cart/show"

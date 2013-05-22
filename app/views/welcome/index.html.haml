@@ -5,15 +5,24 @@
 		.navigation.right
 
 		%ul.pages
-			%li .
-			%li .
-			%li .
+			%li
+			%li 
+			%li 
 	/ end highlights carousel
 
 	#static_highlights
 		#upper_highlights
 
 		#bottom_highlights
+
+	#shop_highlights
+		%p Shop
+		%ul
+			%li
+			%li
+			%li
+			%li
+			%li
 
 	#blog_highlights
 		- if !@home_headlines.nil?
@@ -22,7 +31,7 @@
 				%h3= @home_headlines.title
 				%p= @home_headlines.body
 
-				= link_to "Saiba mais >" ,"#", :class => "know-more"
+				= link_to 'Saiba mais <span class="arrow-right"></span>'.html_safe ,"#", :class => "know-more"
 
 			.image
 				= image_tag @home_headlines.image_url(:thumb) if @home_headlines.image?

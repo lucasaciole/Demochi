@@ -6,7 +6,6 @@
 		color: #51d1e0;
 		display: inline-block;
 		float: left;
-		font-family: 'Open Sans', sans-serif;
 		font-size: 29px;
 		height: 414px;
 		position: relative;
@@ -36,11 +35,16 @@
 			left: 47%;
 			list-style-type: none;
 			margin: 0;
+			margin-bottom: 15px;
 			padding: 0;
 			position: absolute;
 
 			li {
 				display: inline-block;
+				width: 9px;
+				height: 8px;
+				background: url("gray-dot.png");
+				cursor: pointer;
 			}
 		}
 	}

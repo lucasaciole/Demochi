@@ -39,31 +39,28 @@
 				text-transform: uppercase;
 
 				ul {
-					list-style-type: none;
 					margin: 0;
 					padding: 0;
 					text-transform: none;
 
 					a {
 						color: #51d1e0;
-						font-family: 'Open Sans';
 						font-size: 13px;
 						text-decoration: none;
 
-						&:hover {
-							text-decoration: underline;
-						}
+						// &:hover {
+						// 	text-decoration: underline;
+						// }
 					}
 
 					li {
-						margin: 2px 0;
+						margin: 5px 0;
 					}
 				}
 
 				span {
 					display: inline-block;
 					font-weight: bold;
-					font-size: 14px;
 					margin-bottom: 11px; 
 				}
 
@@ -104,7 +101,6 @@
 
 				div:first-child{
 					color: #FFF;
-					font-family: 'Open Sans';
 
 					.one, .two {
 						text-align: center;
@@ -127,8 +123,6 @@
 				.email-box {
 					background: #FFF;
 					color: #51d1e0;
-					font-family: 'Open Sans';
-					font-size: 14px;
 					font-weight: bold;
 					height: 70px;
 					// line-height: 70px;
@@ -137,21 +131,33 @@
 					form {
 						margin-top: 25px;
 						text-align: center;
+						font-size: 14px;
+
+						input {
+							border: none;
+						}
 
 						input[type="text"] {
-							border: none;
 							border-bottom: 1px solid #b2b2b2;
 							padding: 3px;
 							width: 200px;
 						}
 
 						input[type="submit"] {
+							font-size: 14px;
+							font-style: italic;
 							background: none;
-							border: none;
 							color: #51d1e0;
 							cursor: pointer;
-							font-size: 14px;
 							font-weight: bold;
+						}
+
+						.arrow-right {
+							background: url("blue-arrow-right.png");
+							display: inline-block;
+							height: 7px;
+							margin-left: -5px;
+							width: 6px;
 						}
 					}
 				}
@@ -164,7 +170,8 @@
 		line-height: 30px;
 
 		p {
-			margin-top: 0;
+			margin: 0;
+			line-height: 28px;
 
 			a {
 				color: #000;

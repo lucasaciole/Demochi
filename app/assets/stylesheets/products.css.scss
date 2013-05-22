@@ -1,67 +1,67 @@
-// Place all the styles related to the products controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-.products {
-	.category {
-		color: #777777;
-		float: left;
-		margin-left: 5px;
-	}
+// // Place all the styles related to the products controller here.
+// // They will automatically be included in application.css.
+// // You can use Sass (SCSS) here: http://sass-lang.com/
+// .products {
+// 	.category {
+// 		color: #777777;
+// 		float: left;
+// 		margin-left: 5px;
+// 	}
 	
-	.code {
-		color: #777777;
-	}
+// 	.code {
+// 		color: #777777;
+// 	}
 	
-	.btn-cart {
-		bottom: 0px;
-		position: absolute;
-		width: 100%;
+// 	.btn-cart {
+// 		bottom: 0px;
+// 		position: absolute;
+// 		width: 100%;
 		
-		.btn {
-			width: 86%;
-		}
-	}	
+// 		.btn {
+// 			width: 86%;
+// 		}
+// 	}	
 
-	.desc {
-		display: block;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap;
+// 	.desc {
+// 		display: block;
+// 		overflow: hidden;
+// 		text-overflow: ellipsis;
+// 		white-space: nowrap;
 		
-		a {
-			text-decoration: underline;
-			color: #009ACD;
-		}
+// 		a {
+// 			text-decoration: underline;
+// 			color: #009ACD;
+// 		}
 
-		a:hover {
-			background-color: #FFF;
-			color: #00688B;
-		}
-	}
+// 		a:hover {
+// 			background-color: #FFF;
+// 			color: #00688B;
+// 		}
+// 	}
 	
-	.image {
-		height: 150px;
-		line-height:150px;
-		margin-top: 5px;
-		margin-bottom:10px;
-	}
+// 	.image {
+// 		height: 150px;
+// 		line-height:150px;
+// 		margin-top: 5px;
+// 		margin-bottom:10px;
+// 	}
 	
-	.info { 
-		margin: 0 5px 0;
-		width: 95%;
-	}
+// 	.info { 
+// 		margin: 0 5px 0;
+// 		width: 95%;
+// 	}
 	
-	.price {
-		color: red;
-		float: right;
-		margin-right: 5px;
-	}
+// 	.price {
+// 		color: red;
+// 		float: right;
+// 		margin-right: 5px;
+// 	}
 		
-	.span2 {
-		margin: 0 0 8px 8px;
-		min-height: 232px;
-		position: relative;
-		text-align: center;
-		width: 185px;
-	}
-}
+// 	.span2 {
+// 		margin: 0 0 8px 8px;
+// 		min-height: 232px;
+// 		position: relative;
+// 		text-align: center;
+// 		width: 185px;
+// 	}
+// }
